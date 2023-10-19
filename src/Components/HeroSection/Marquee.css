@@ -1,0 +1,78 @@
+:root{
+    --card-speed: 0.5s;
+    --card-count:11;
+    --card-height:34vh;
+}
+.Marquee{
+    display: flex;
+}
+.cards{
+    background-color: rgb(241, 187, 120);
+    display: flex;
+    position: relative;
+    animation: autoscroll  calc(2s * var(--card-count)) linear infinite;
+    width: fit-content;
+    overflow-x: hidden;
+}
+
+.card{
+    background-color: rgb(216, 30, 145);
+    display: flex;
+    margin: 0 2vh 0 0;
+    height: fit-content;
+    position: relative;
+    align-items: center;
+    padding: 0;
+}
+.card_pic{
+    width: inherit;
+    border-radius: 10%;
+    z-index: 1;
+    height: inherit;
+}
+.details{
+    z-index: 2;
+    position: absolute;
+    bottom: 1vh;
+    margin-left: 1vh;
+    color: white;
+    font-family:  'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+.details > * {
+    margin:0;
+    padding: 0;
+}
+.skill{
+    border-radius: 100px;
+    border: white 1px;
+    background-color:rgba(255, 255, 255, 0);
+    border-style: inset;
+    width: fit-content;
+    padding: 0.05vh 1vh;
+    margin-top: 8px;
+}
+@media screen and (max-width:800px) {
+    .card{
+        animation: card_height_transition ease-in 1s;
+        height: 28vh;
+        margin-right: 2vh;        
+    }
+    .cards{
+        animation: autoscroll  calc(0.4s *  var(--card-count)) linear infinite;
+    }
+    
+}
+@keyframes autoscroll {
+    0% {
+        left: -1%;
+    }
+    50% {
+        left: -50%;
+    }
+}
+@keyframes card_height_transition {
+    0%{height: 34vh;}
+    100%{height: 28vh;}
+}

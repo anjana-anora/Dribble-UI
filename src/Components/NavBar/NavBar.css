@@ -1,0 +1,92 @@
+.NavBar{
+    height: 100px;
+    /* background-color: aquamarine; */
+    background-color: #f8f7f4;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-bottom: #111 dashed;
+    color: #111;
+    flex-direction: row;
+}
+.opt_container{
+    background-color: inherit;
+    margin-left: 2rem;
+}
+.nav_tab{
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: inherit;
+    margin-right: 2rem;
+    cursor: pointer;
+    color: inherit;
+}
+.logo{
+    margin: auto;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+.login_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+    margin: 0 2.5% 0 10%;
+    align-items: center;
+    
+}
+.login{
+    border: none;
+    background-color: inherit;
+    width: 70px;
+    height: 40px;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dot{
+    font-size: 15px;
+    bottom: 0.3rem;
+    position: relative;
+    font-weight: 1000;
+}
+.signup{
+    background-color: #111;
+    border-radius: 25%;
+    padding: 5%;
+    color: azure;
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 200px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.menu{
+    margin-left: 4%;
+    display: none;
+    cursor: pointer;
+}
+.line1,.line2,.line3{
+    width: 1.2rem;
+    height: 0.19rem;
+    background-color: #111;
+    margin: 15% ;
+}
+.line2{
+    width: 1.4rem;
+    height: 0.18rem;
+}
+.line3{
+    width: 0.7rem;
+}
+@media screen and (max-width: 900px) {
+    .NavBar a, .login, .dot {display: none;}
+    .topnav a.icon {
+      display: flex;
+    }
+    .menu{
+        display: inline;
+    }
+    .logo{
+        margin-left: 0;
+    }
+}
