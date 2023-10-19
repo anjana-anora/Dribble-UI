@@ -35,7 +35,7 @@
     background-color: black;
     border-radius: 200px;
     padding: 1.7vh 2.5vh;
-    margin: 4vh 0 3vh;
+    margin: 4vh 0 2.5vh;
 }
 @keyframes color_cycle {
     0%{background-color: #ffda79;}

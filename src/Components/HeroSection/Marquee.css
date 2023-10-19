@@ -1,25 +1,27 @@
 :root{
     --card-speed: 0.5s;
-    --card-count:11;
+    --card-count:20;
     --card-height:34vh;
+    --card-media-width: 273px;    
 }
 .Marquee{
     display: flex;
+    width: 100%;
 }
 .cards{
-    background-color: rgb(241, 187, 120);
+    /* background-color: rgb(241, 187, 120); */
     display: flex;
     position: relative;
-    animation: autoscroll  calc(2s * var(--card-count)) linear infinite;
     width: fit-content;
     overflow-x: hidden;
+    animation: autoscroll  calc(2s * var(--card-count)) linear infinite;
 }
 
 .card{
-    background-color: rgb(216, 30, 145);
+    /* background-color: rgb(216, 30, 145); */
     display: flex;
     margin: 0 2vh 0 0;
-    height: fit-content;
+    height: 34vh;
     position: relative;
     align-items: center;
     padding: 0;
@@ -35,7 +37,7 @@
     position: absolute;
     bottom: 1vh;
     margin-left: 1vh;
-    color: white;
+    color: #fff;
     font-family:  'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -60,17 +62,13 @@
         margin-right: 2vh;        
     }
     .cards{
-        animation: autoscroll  calc(0.4s *  var(--card-count)) linear infinite;
+        animation: autoscroll  calc(1s *  var(--card-count)) linear infinite;
     }
     
 }
 @keyframes autoscroll {
-    0% {
-        left: -1%;
-    }
-    50% {
-        left: -50%;
-    }
+    0%{left: 0%;}
+    100%{left: -90%;}
 }
 @keyframes card_height_transition {
     0%{height: 34vh;}
