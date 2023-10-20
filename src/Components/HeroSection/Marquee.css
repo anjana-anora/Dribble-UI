@@ -2,7 +2,8 @@
     --card-speed: 0.5s;
     --card-count:20;
     --card-height:34vh;
-    --card-media-width: 273px;    
+    --card-media-width: 273px; 
+    --maximum-width:800px;   
 }
 .Marquee{
     display: flex;
@@ -10,6 +11,7 @@
 }
 .cards{
     /* background-color: rgb(241, 187, 120); */
+    margin-top: 6vh;
     display: flex;
     position: relative;
     width: fit-content;
@@ -55,7 +57,7 @@
     padding: 0.05vh 1vh;
     margin-top: 8px;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px ) {
     .card{
         animation: card_height_transition ease-in 1s;
         height: 28vh;
@@ -63,8 +65,7 @@
     }
     .cards{
         animation: autoscroll  calc(1s *  var(--card-count)) linear infinite;
-    }
-    
+    }  
 }
 @keyframes autoscroll {
     0%{left: 0%;}

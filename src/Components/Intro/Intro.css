@@ -1,0 +1,32 @@
+.intro_container{
+    margin: 10vh 35vh 0 35vh;
+    padding-bottom: 10vh;
+    text-align: left;
+    border-bottom: 1px #d3cdcd solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+.intro_part1{
+    width: 50%;
+}
+.intro_title{
+    font-size: 75px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 10vh;
+}
+.intro_part2{
+    width: 50%;
+}
+.intro_content{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 5vh;
+}
+@media screen and (max-width:800px) {
+    .intro_container{
+        display: block;
+        margin-left: 2vh ;
+        margin-right: 2vh ;
+    }
+}

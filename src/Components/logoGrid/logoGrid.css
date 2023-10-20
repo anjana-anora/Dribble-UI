@@ -1,0 +1,41 @@
+:root{
+    --maximum-width:800px;
+}
+.grid_container{
+    margin-top: 8vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.caption{
+    font-size: 1.5vh;
+    
+}
+.grid{
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+.grid_col{
+    height: 55px;
+    width: 100px;
+    filter: grayscale(100%);
+    margin: 0 4vh;
+}
+@media screen and (max-width:800px) {
+    .grid{
+        grid-template-columns: auto auto;
+        justify-content: center;
+        margin-top: 4vh;
+    }
+    .grid_col{
+        margin: 0 4vh 2vh 4vh;
+    }
+    .grid_container{
+        display: block;
+    }
+}

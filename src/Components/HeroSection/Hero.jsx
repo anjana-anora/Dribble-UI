@@ -1,17 +1,21 @@
 import React from 'react'
 import './Hero.css'
-import Marquee from './Marquee'
 
-export default function Banner() {
+import Button from '../Button/Button';
+
+export default function Banner(props) {
+  let banner = props.banner;
   return (
     <div className='Banner'>
-      <div className="home_container">
-        <div className='textline1'>Over 3 million ready-to-work creatives in our community!</div>
-        <h1 className='hero_heading'>Hire the world’s top <br/>creative talent.</h1>
-        <div className='connect'>Connect with a community of millions of top-rated designers & agencies around the world.</div>
-        <a href="dribble.com" className="hire_button">Start hiring today</a>
+      <div className="banner_container">
+        <div className='text_box' style={{backgroundColor:banner.bg}}>{banner.textBox}</div>
+        <h1 className='hero_heading'>{banner.title}</h1>
+        <div className='content'>{banner.content}</div>
+
+        {banner.buttonText && <Button buttonText={banner.buttonText} />}
+        
       </div>
-      <Marquee/>
+  
     </div>
   )
 }
